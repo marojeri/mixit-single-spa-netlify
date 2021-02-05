@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <title>Root Config</title>
+    <base href="/">
+    <script src="https://cdn.jsdelivr.net/npm/regenerator-runtime@0.13.7/runtime.min.js"></script>
+    <meta content="systemjs-importmap" name="importmap-type"/>
+    <link as="script" href="https://cdn.jsdelivr.net/npm/single-spa@5.8.2/lib/system/single-spa.min.js" rel="preload">
+    <script type="systemjs-importmap">
+    {
+      "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.8.2/lib/system/single-spa.min.js",
+        "@akzonobel/mixit-portal": "/akzonobel-mixit-portal.js",
+        "@akzonobel/mixit-authentication": "/akzonobel-mixit-authentication.js",
+        "@akzonobel/mixit-navigation": "/main.js",
+        "@akzonobel/mixit-legacy": "/app.js"
+      }
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/zone.js@0.11.3/dist/zone.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.2/dist/system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.2/dist/extras/amd.min.js"></script>
+    <template id="single-spa-layout">
+        <single-spa-router>
+            <nav>
+                <application name="@akzonobel/mixit-navigation"></application>
+            </nav>
+            <main>
+                <route default>
+                    <application name="@akzonobel/mixit-legacy"></application>
+                </route>
+            </main>
+        </single-spa-router>
+    </template>
+</head>
+<body>
+<script>System.import('@akzonobel/mixit-portal');</script>
+<import-map-overrides-full dev-libs show-when-local-storage="devtools"></import-map-overrides-full>
+</body>
+</html>

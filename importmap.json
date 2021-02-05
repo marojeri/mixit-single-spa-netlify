@@ -1,0 +1,9 @@
+{
+  "imports": {
+	"single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.8.2/lib/system/single-spa.min.js",
+	"@akzonobel/mixit-portal": "//sasdo10030wa0003.azurewebsites.net/akzonobel-mixit-portal.js",
+	"@akzonobel/mixit-authentication": "//sasdo10030wa0003.azurewebsites.net/akzonobel-mixit-authentication.js",
+	"@akzonobel/mixit-navigation": "//sasdo10030wa0003.azurewebsites.net/main.js",
+	"@akzonobel/mixit-legacy": "//sasdo10030wa0003.azurewebsites.net/app.js"
+  }
+}

@@ -1,0 +1,1 @@
+mixit-single-spa-netlify
